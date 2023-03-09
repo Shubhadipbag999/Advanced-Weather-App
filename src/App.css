@@ -1,0 +1,600 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.flexNow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weatherAppMainContainer {
+  background-color: rgb(10, 12, 20);
+
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  position: relative;
+}
+
+.HomePageChildExplore > span {
+  font-family: "Lato", sans-serif;
+  font-size: 1.7vw;
+  margin: 3vh;
+}
+.weatherDetailsContainer {
+  height: 100%;
+  width: 70vw;
+  /* border-right: 1px solid red; */
+  flex-direction: column;
+}
+.weeklyForecastContainer {
+  font-size: 10px;
+  height: 100%;
+  width: 30vw;
+}
+.searchDivContainer {
+  height: 8.5vh;
+  width: inherit;
+  /* position: absolute;
+  top: 0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loacalDateTime {
+  width: inherit;
+  height: 5vh;
+}
+
+.searchBox {
+  height: 7vh;
+  width: 40vw;
+  border-radius: 15px;
+  outline: none;
+  padding-left: 10px;
+  color: white;
+  background-color: rgba(110, 103, 103, 0.5);
+  border: none;
+  margin: 0px 1vw;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+
+.searchButton {
+  height: 7vh;
+  padding: 16px;
+  border-radius: 15px;
+  background-color: rgb(0, 170, 255);
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  margin-right: 1vw;
+}
+.searchButton:hover {
+  background-color: rgb(0, 157, 255);
+}
+
+.searchButton > span {
+  margin-right: 0.6vw;
+  letter-spacing: 2.4px;
+  font-size: 16px;
+}
+
+.detailsContainer {
+  height: 27vh;
+  width: 80%;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 1.5vh;
+  justify-content: space-between;
+}
+
+.subDetailsContainer {
+  height: 24vh;
+  width: 80%;
+  border-radius: 15px;
+  background-color: rgba(110, 103, 103, 0.5);
+  margin-bottom: 1.5vh;
+  flex-direction: column;
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: rgba(0, 157, 255, 1);
+}
+
+.subDetailsContainer1 {
+  width: 100%;
+  height: 75%;
+  flex-direction: column;
+  font-size: 22px;
+}
+.subDetailsContainer1 > span {
+  margin-bottom: 0.5vh;
+  letter-spacing: 1px;
+}
+.subDetailsContainer2 {
+  width: 100%;
+  height: 25%;
+  /* justify-content: space-around; */
+  letter-spacing: 1px;
+}
+.loacalDateTime {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 1vh;
+}
+
+.hourlyForecastContainer {
+  height: 25vh;
+  width: 80%;
+  border-radius: 15px;
+  background-color: rgb(0, 157, 255);
+  font-family: "Sofia Sans Semi Condensed", sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.divTitlehourly {
+  height: 7vh;
+  width: 100%;
+  padding: 6px 4vw;
+  /* background-color: aliceblue; */
+  /* font-family: "Source Sans Pro", sans-serif; */
+  font-size: 2vw;
+}
+
+.hourlyCard {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.hourlyForecastCards {
+  height: 18vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* padding: 20px; */
+  justify-content: space-around;
+}
+.cityAndTemp {
+  height: inherit;
+  width: 32%;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: rgba(0, 157, 255, 1);
+}
+
+.cityAndTemp > span {
+  font-size: 3vw;
+  font-family: "Mukta", sans-serif;
+  margin: 0.7vh 0vw;
+}
+
+.btnAndWeatherType {
+  height: inherit;
+  width: 32%;
+  flex-direction: column;
+  border-radius: 15px;
+  /* background-color: rgba(110, 103, 103, 0.5); */
+  background-color: rgba(0, 157, 255, 1);
+}
+
+.twoBtn {
+  width: 50%;
+  height: 5vh;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 2vh;
+}
+.twoBtn > h2 {
+  width: 50%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.5s ease-in;
+  color: black;
+}
+.twoBtn > h2:hover {
+  font-size: 24px;
+}
+.weatherLogo {
+  height: inherit;
+  width: 32%;
+  border-radius: 15px;
+  /* background-color: rgba(110, 103, 103, 0.5);*/
+  background-color: rgba(0, 157, 255, 1);
+}
+
+.weatherType {
+  font-size: 30px;
+  font-family: "Mukta", sans-serif;
+}
+
+.weeklyForecastDiv {
+  height: 85%;
+  width: 80%;
+  background-color: rgba(0, 157, 255, 1);
+  border-radius: 10px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.weeklyForecast {
+  height: 10%;
+  font-size: 2vw;
+  display: flex;
+  align-items: center;
+
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.weeklyForecastDivCards {
+  height: 85%;
+  width: 100%;
+  font-size: 20px;
+  /* background-color: aquamarine; */
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  margin-top: 5%;
+}
+.weeklyCard {
+  height: 80%;
+  width: 100%;
+
+  /* background-color: rgb(12, 12, 12); */
+  justify-content: space-around;
+  /* padding-left: 32px; */
+}
+
+/* h2::after {
+  background-color: red;
+} */
+
+.currentLoaction {
+  color: rgb(0, 179, 255);
+  cursor: pointer;
+}
+.currentLoaction:hover {
+  color: rgb(0, 157, 255);
+}
+
+.weatherType {
+  font-size: 2.7vw;
+}
+.HomePageContainer {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  justify-content: space-around;
+}
+.displayNone {
+  display: none;
+}
+.HomePageChildAppName {
+  height: 80%;
+  width: 55%;
+  background-color: rgb(0, 179, 255);
+  border-radius: 30px;
+  position: relative;
+  flex-direction: column;
+}
+.HomePageChildAppName > span {
+  z-index: 22;
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+  background-color: rgba(0, 179, 255, 0.4);
+  border-radius: 10px;
+  color: rgb(255, 0, 0);
+  animation-name: weatherApp;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  /* border: 1px solid black; */
+}
+@keyframes weatherApp {
+  from {
+    font-size: 5vw;
+  }
+  to {
+    font-size: 6vw;
+  }
+}
+
+.cloud1 {
+  height: 10vw;
+  position: absolute;
+  top: 10%;
+  left: 0%;
+  z-index: 1;
+
+  animation-name: cloud1amove;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+@keyframes cloud1amove {
+  to {
+    transform: translateY(40%);
+    transform: translateX(120%);
+  }
+}
+.cloud2 {
+  height: 25vw;
+  position: absolute;
+  left: 30px;
+  bottom: 0px;
+
+  animation-name: cloud2amove;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  /* transform: rotate(-20deg); */
+  z-index: 1;
+}
+@keyframes cloud2amove {
+  to {
+    transform: rotate(-20deg);
+  }
+}
+.umbrella {
+  height: 20vw;
+  position: absolute;
+  /* transition: all ease-in 5s;
+  transform: rotate(20deg); */
+  animation-name: umbrellamove;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  right: 10%;
+  top: 10%;
+  z-index: 1;
+}
+
+@keyframes umbrellamove {
+  to {
+    transform: rotate(20deg);
+  }
+}
+.HomePageChildExplore {
+  height: 80%;
+  width: 35%;
+  background-color: rgb(0, 179, 255);
+  border-radius: 30px;
+  flex-direction: column;
+}
+
+.exploreBtn {
+  padding: 15px 30px;
+  letter-spacing: 2.5px;
+  cursor: pointer;
+  font-size: 1.5vw;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(60, 238, 179);
+
+  /* animation-name: exploreBtn;
+  animation-duration: 7s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite; */
+}
+
+.exploreBtn:hover {
+  background-color: rgb(1, 253, 169);
+}
+.appLogo {
+  height: 10vw;
+  background-color: rgba(15, 15, 15, 0.5);
+  border-radius: 15px;
+}
+
+.temp {
+  color: white;
+}
+@media screen and (max-width: 800px) {
+  .weatherAppMainContainer {
+    flex-direction: column;
+    height: auto;
+  }
+  .weeklyForecastContainer {
+    width: 100%;
+    height: auto;
+  }
+  .weatherDetailsContainer {
+    /* background-color: aqua; */
+    width: 100%;
+    /* height: 100vh; */
+  }
+  .weeklyForecastDivCards {
+    flex-direction: row;
+    /* height: 18vh; */
+  }
+  .weeklyCard {
+    flex-direction: column;
+    font-size: 2vw;
+  }
+  .weeklyForecast {
+    height: 6vh;
+    font-size: 2.7vw;
+    /* margin-top: 1vh; */
+  }
+  .hourlyForecastContainer {
+    height: 20vh;
+  }
+  .hourlyCard {
+    font-size: 2vw;
+    /* background-color: blue; */
+    margin-top: -40px;
+  }
+  .divTitlehourly {
+    font-size: 2.7vw;
+  }
+  .subDetailsContainer {
+    height: 20vh;
+  }
+  .subDetailsContainer1 {
+    font-size: 2.3vw;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 10px;
+    height: 50%;
+  }
+  .subDetailsContainer2 {
+    font-size: 2vw;
+  }
+  .detailsContainer {
+    height: 17vh;
+  }
+  /* .searchDivContainer {
+    height: 6vh;
+  }
+  .searchBox {
+    height: 5vh;
+  } */
+  /* .loacalDateTime {
+    display: none;
+  } */
+  .weeklyForecastDiv {
+    height: 20vh;
+    margin-top: -10px;
+  }
+  .weatherAppMainContainer {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .displayNone {
+    display: block;
+    margin-top: 2vh;
+  }
+  .HomePageChildExplore {
+    display: none;
+  }
+  .HomePageChildAppName {
+    width: 90%;
+  }
+
+  @keyframes weatherApp {
+    from {
+      font-size: 9vw;
+    }
+    to {
+      font-size: 10vw;
+    }
+  }
+
+  .cloud1 {
+    height: 20vw;
+
+    top: 30%;
+  }
+
+  .cloud2 {
+    height: 25vh;
+
+    left: 10%;
+    bottom: 15%;
+  }
+
+  .umbrella {
+    height: 20vh;
+
+    right: 2%;
+    top: 30%;
+    z-index: 1;
+  }
+  .exploreBtn {
+    padding: 10px;
+    font-size: 3vw;
+    z-index: 22;
+  }
+  .detailsContainer {
+    width: 95vw;
+  }
+  .cityAndTemp > span {
+    font-size: 1.7vh;
+  }
+
+  .weatherType {
+    font-size: 2vh;
+  }
+  .subDetailsContainer {
+    width: 95%;
+    overflow: hidden;
+  }
+  .subDetailsContainer1 {
+    height: 80%;
+    flex-direction: column;
+    font-size: 2.5vh;
+  }
+  .subDetailsContainer2 {
+    font-size: 1.3vh;
+    background-color: red;
+  }
+  .hourlyForecastContainer {
+    width: 95%;
+    height: 17vh;
+    overflow: hidden;
+  }
+  .divTitlehourly {
+    background-color: red;
+    height: 25%;
+  }
+  .divTitlehourly > span {
+    font-size: 2.6vh;
+  }
+  .hourlyCard {
+    font-size: 1.7vh;
+  }
+  .weeklyForecastDiv {
+    width: 95%;
+    margin-top: -4vh;
+    margin-bottom: 1vh;
+    height: 20vh;
+    overflow: hidden;
+  }
+  .weeklyForecast {
+    background-color: red;
+    padding: 1vh 4vw;
+    margin-bottom: 0px;
+    font-size: 2.6vh;
+  }
+  .weeklyForecastDivCards {
+    /* background-color: black; */
+    margin-top: 0px;
+    /* overflow: hidden; */
+    /* flex-direction: column; */
+  }
+  .weeklyCard {
+    font-size: 1.7vh;
+  }
+  .loacalDateTime {
+    font-size: 1.4vh;
+  }
+  .searchDivContainer {
+    width: 95%;
+    /* background-color: aqua; */
+  }
+  .searchBox {
+    width: 60%;
+  }
+  .searchButton {
+    width: 30%;
+  }
+  .hourlyForecastCards {
+    width: 100%;
+    padding-left: 1vw;
+  }
+}
